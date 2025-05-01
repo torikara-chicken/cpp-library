@@ -45,6 +45,7 @@ struct Trie
             ++nodes[node_index].prefix_count;
             node_index = nodes[node_index].nxt[c];
         }
+        ++nodes[node_index].prefix_count;
         nodes[node_index].accept.push_back(str_index);
     }
     bool search(const string &str)
